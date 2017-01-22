@@ -1,10 +1,9 @@
 """
-Goal: implement and test quicksort
+Goal: implement and test the "fuzzy sorting" for intervals
+
+@see CLRS v3 book page 189
 @date: 2017-01-21
 @author: Andrei Sura
-
-
-Note: see CLRS v3 book page 171
 """
 
 class segment():
@@ -36,11 +35,11 @@ def partition(data, left, right):
     return i + 1
 
 
-def quick_sort(data, left, right):
+def fuzzy_sort(data, left, right):
     if left < right:
         pivot = partition(data, left, right)
-        quick_sort(data, left, pivot - 1)
-        quick_sort(data, pivot + 1, right)
+        fuzzy_sort(data, left, pivot - 1)
+        fuzzy_sort(data, pivot + 1, right)
 
 data = [segment(5, 10),
         segment(3, 5),
@@ -50,7 +49,7 @@ data = [segment(5, 10),
 
 
 print("Input array: {}".format(data))
-quick_sort(data, 0, len(data) - 1)
+fuzzy_sort(data, 0, len(data) - 1)
 print("Output array: {}".format(data))
 """
 Output array: [(1, 2), (2, 7), (3, 5), (4, 6), (5, 10)]

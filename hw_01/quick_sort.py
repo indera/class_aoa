@@ -1,10 +1,9 @@
 """
 Goal: implement and test quicksort
+
+@see CLRS v3 book page 171
 @date: 2017-01-21
 @author: Andrei Sura
-
-
-Note: see CLRS v3 book page 171
 """
 
 def partition(data, p, right):

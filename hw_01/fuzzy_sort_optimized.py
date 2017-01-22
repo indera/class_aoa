@@ -1,10 +1,13 @@
 """
-Goal: implement and test quicksort
+Goal: implement and test the "fuzzy sorting" for intervals
+Note: in comparison to the `fuzzy_sort.py` this "optimized"
+     version uses the right end of the interval to reduce
+     the "problem size" and achieve O(n) expected running
+     time when all intervals overlap.
+
+@see CLRS v3 book page 189
 @date: 2017-01-21
 @author: Andrei Sura
-
-
-Note: see CLRS v3 book page 171
 """
 
 class segment():
